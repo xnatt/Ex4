@@ -14,8 +14,6 @@ def multiply(x, y):
 
 # This function divides two numbers
 def divide(x, y):
-    if y == 0:
-        return "Error: division by zero"
     return x / y
 
 
@@ -48,7 +46,10 @@ while True:
             print("You enter code for #3 here")
             
         elif choice == '4':
-            print("You enter code for #4 here")
+            if num2 == 0:
+                print("Error: Division by zero.")
+            else:
+                print(num1, "/", num2, "=", divide(num1, num2))
             
         # check if user wants another calculation
         # break the while loop if answer is no
